@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import Fade from 'react-reveal/Fade';
 function Section({
 	title,
 	description,
@@ -11,16 +11,20 @@ function Section({
 	// console.log(props) // unpacked items from props object
 	return (
 		<Wrap bgImage={backgroundImg}>
-			<ItemText>
-				<h1>{title}</h1>
-				<p>{description}</p>
-			</ItemText>
+			<Fade bottom>
+				<ItemText>
+					<h1>{title}</h1>
+					<p>{description}</p>
+				</ItemText>
+			</Fade>
 			<Buttons>
-				<ButtonGroup>
-					<LeftButton>{leftBtnText}</LeftButton>
-					{rightBtnText && <RightButton>{rightBtnText}</RightButton>}
-				</ButtonGroup>
-				<DownArrow src='..//images/down-arrow.svg'></DownArrow>
+				<Fade bottom>
+					<ButtonGroup>
+						<LeftButton>{leftBtnText}</LeftButton>
+						{rightBtnText && <RightButton>{rightBtnText}</RightButton>}
+					</ButtonGroup>
+					<DownArrow src='..//images/down-arrow.svg'></DownArrow>
+				</Fade>
 			</Buttons>
 		</Wrap>
 	);
