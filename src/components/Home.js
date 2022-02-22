@@ -40,7 +40,7 @@ function Home() {
 				leftBtnText='Order Now'
 				rightBtnText='Learn More'
 			/>
-      <Section
+			<Section
 				title='Solar for New Roofs'
 				description='Produce Clean Energy From Your Roof'
 				backgroundImg='solar-roof.jpg'
@@ -61,4 +61,5 @@ export default Home;
 
 const Container = styled.div`
 	height: 100vh;
+	z-index: 10;
 `;
