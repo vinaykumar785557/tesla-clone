@@ -48,7 +48,7 @@ export default function Header() {
 			</Menu>
 			<RightMenu>
 				<a href='#'>Shop</a>
-				<a href='#'>Tesla Account</a>
+				<a href='#'>Account</a>
 				<CustomMenu onClick={() => setBurgerStatus(true)}></CustomMenu>
 			</RightMenu>
 			<BurgerNav show={burgerStatus}>
@@ -142,6 +142,7 @@ const Menu = styled.div`
 
 const RightMenu = styled.div`
 	display: flex;
+
 	align-items: center;
 	a {
 		font-weight: 600;
