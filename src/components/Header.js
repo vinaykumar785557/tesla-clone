@@ -6,6 +6,22 @@ import Close from '@material-ui/icons/Close';
 import { selectCars } from '../features/car/carSlice';
 import { useSelector } from 'react-redux';
 
+const sidebarMenuItems = [
+	'Existing Inventory',
+	'Used Inventory',
+	'Trade-in',
+	'Cybertruck',
+	'Roadster',
+	'Semi',
+	'Charging',
+	'PowerWall',
+	'Commercial Energy',
+	'Utilities',
+	'Find Us',
+	'Support',
+	'Investor Relations',
+];
+
 export default function Header() {
 	const [burgerStatus, setBurgerStatus] = useState(false);
 	const cars = useSelector(selectCars);
@@ -45,7 +61,14 @@ export default function Header() {
 							<a href='#'>{car}</a>
 						</li>
 					))}
-				<li>
+
+				{sidebarMenuItems.map((item, index) => (
+					<li key={index}>
+						<a href='#'>{item}</a>
+					</li>
+				))}
+
+				{/* <li>
 					<a href='#'>Existing Inventory</a>
 				</li>
 				<li>
@@ -66,6 +89,24 @@ export default function Header() {
 				<li>
 					<a href='#'>Charging</a>
 				</li>
+				<li>
+					<a href='#'>PowerWall</a>
+				</li>
+				<li>
+					<a href='#'>Commercial Energy</a>
+				</li>
+				<li>
+					<a href='#'>Utilities</a>
+				</li>
+				<li>
+					<a href='#'>Find Us</a>
+				</li>
+				<li>
+					<a href='#'>Support</a>
+				</li>
+				<li>
+					<a href='#'>Investor Relations</a>
+				</li> */}
 			</BurgerNav>
 		</Container>
 	);
@@ -129,6 +170,8 @@ const BurgerNav = styled.div`
 	transform: ${(props) => (props.show ? 'translateX(0)' : 'translateX(100%)')};
 
 	transition: transform 0.2s;
+
+	overflow: scroll;
 
 	li {
 		padding: 15px 0px;
