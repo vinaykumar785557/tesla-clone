@@ -11,7 +11,7 @@ function Section({
 }) {
 	// console.log(props) // unpacked items from props object
 	return (
-		<>
+		<> 
 			<Wrap bgImage={backgroundImg}>
 				<Fade bottom>
 					<ItemText>

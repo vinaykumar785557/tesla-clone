@@ -6,6 +6,7 @@ import Close from '@material-ui/icons/Close';
 import { selectCars } from '../features/car/carSlice';
 import { useSelector } from 'react-redux';
 
+
 const sidebarMenuItems = [
 	'Existing Inventory',
 	'Used Inventory',
@@ -108,6 +109,7 @@ export default function Header() {
 					<a href='#'>Investor Relations</a>
 				</li> */}
 			</BurgerNav>
+			
 		</Container>
 	);
 }
